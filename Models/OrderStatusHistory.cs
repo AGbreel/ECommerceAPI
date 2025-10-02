@@ -1,7 +1,8 @@
-namespace ECommerce.Models
+namespace ECommerceAPI.Models
 {
     public class OrderStatusHistory
     {
+        public int Id { get; set; }  // PK
         public int HistoryId { get; set; }
         public int OrderId { get; set; }
         public string Status { get; set; } = string.Empty;

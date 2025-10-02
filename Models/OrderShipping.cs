@@ -2,7 +2,8 @@ namespace ECommerceAPI.Models
 {
     public class OrderShipping
     {
-        public int ShippingId  { get; set; }
+        public int Id { get; set; }  // PK
+        public int ShippingId { get; set; }
         public int OrderId { get; set; }
         public string RecipientName { get; set; } = string.Empty;
         public string Phone { get; set; } = string.Empty;

@@ -176,3 +176,4 @@ E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\bin\Debug\net9.0\publish\appsett
 E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\bin\Debug\net9.0\publish\ECommerceAPI.deps.json
 E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\bin\Debug\net9.0\publish\ECommerceAPI.runtimeconfig.json
 E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\bin\Debug\net9.0\publish\ECommerceAPI.staticwebassets.endpoints.json
+E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\obj\Debug\net9.0\ECommerceAPI.sourcelink.json

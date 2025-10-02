@@ -2,6 +2,7 @@ namespace ECommerceAPI.Models
 {
     public class WishlistItem
     {
+        public int Id { get; set; }  // PK
         public int WishlistId { get; set; }
         public int UserId { get; set; }
         public int ProductId { get; set; }
