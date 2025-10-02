@@ -1,0 +1,31 @@
+"DefaultConnection": "Server=localhost;Database=ECommerceDB;Trusted_Connection=True;TrustServerCertificate=True;"
+"DefaultConnection": "Server=db28658.public.databaseasp.net; Database=db28658; User Id=db28658; Password=eW@8F4p-cJ_2; Encrypt=False; MultipleActiveResultSets=True;"
+  
+
+http://localhost:5249/swagger/index.html
+========================================
+=== Users ===
+post   =>  http://localhost:5249/api/Users/register
+post   =>  http://localhost:5249/api/Users/login
+
+=== Products ===
+get    =>  http://localhost:5249/api/Products
+get    =>  http://localhost:5249/api/Products/${id}
+get    =>  http://localhost:5249/api/Products/ByCategory/${categoryId}
+
+=== Categories ===
+get    =>  http://localhost:5249/api/Categories
+
+=== Cart ===
+post   =>  http://localhost:5249/api/Cart
+get    =>  http://localhost:5249/api/Cart/${userId}
+put    =>  http://localhost:5249/api/Cart/${userId}/${productId}
+delete =>  http://localhost:5249/api/Cart/${userId}/${productId}
+delete =>  http://localhost:5249/api/Cart/clear/${userId}
+
+=== Wishlist ===
+post   =>  http://localhost:5249/api/Wishlist
+get    =>  http://localhost:5249/api/Wishlist/${userId}
+delete =>  http://localhost:5249/api/Wishlist/${userId}/${productId}
+delete =>  http://localhost:5249/api/Wishlist/clear/${userId}
+
