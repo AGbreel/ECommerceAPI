@@ -94,7 +94,7 @@ namespace ECommerceAPI.Repositories
         }
 
         // ✅ Update Product (هي نفس فكرة Create - باستخدام SP تعمل Update + CSV للـ Colors/Sizes/Images)
-        public async Task<bool> UpdateProduct(Product product)
+        public async Task<Product> UpdateProduct(Product product)
         {
             var query = "sp_UpdateProduct";
             var parameters = new DynamicParameters();
@@ -114,8 +114,10 @@ namespace ECommerceAPI.Repositories
 
             using (var connection = _context.CreateConnection())
             {
-                var rows = await connection.ExecuteAsync(query, parameters, commandType: CommandType.StoredProcedure);
-                return rows > 0;
+                var updated = await connection.QueryFirstOrDefaultAsync<Product>(
+                    query, parameters, commandType: CommandType.StoredProcedure);
+
+                return updated;
             }
         }
 

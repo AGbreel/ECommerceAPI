@@ -13,18 +13,3 @@ namespace ECommerceAPI.Models
     }
 }
 
-
-
-// using System;
-// using ECommerce.Models;
-// using Microsoft.AspNetCore.Identity;
-
-// namespace ECommerceAPI.Models
-// {
-//     public class User : IdentityUser<int>
-//     {
-//         public DateTime CreatedAt { get; set; }
-//         public Order Order { get; set; }
-//         public int OrderId { get; set; }
-//     }
-// }

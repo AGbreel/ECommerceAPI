@@ -17,44 +17,73 @@ namespace ECommerceAPI.Controllers
             _wishlistRepo = wishlistRepo;
         }
 
+        // ✅ Get Wishlist by UserId
         [HttpGet("{userId}")]
         public async Task<IActionResult> GetWishlist(int userId)
         {
             var wishlist = await _wishlistRepo.GetWishlist(userId);
-            return Ok(wishlist);
+
+            return Ok(new
+            {
+                Success = true,
+                Message = "Wishlist retrieved successfully",
+                Data = wishlist
+            });
         }
 
+        // ✅ Add to Wishlist
         [HttpPost]
         public async Task<IActionResult> AddToWishlist([FromBody] WishlistCreateDto item)
         {
             if (item == null)
-                return BadRequest("Invalid wishlist data");
+                return BadRequest(new { Success = false, Message = "Invalid wishlist data" });
 
-            // استدعاء الريبو
             await _wishlistRepo.AddToWishlist(item.UserId, item.ProductId);
-            return Ok(new { message = "Product added to wishlist" });
+
+            return Ok(new
+            {
+                Success = true,
+                Message = "Product added to wishlist"
+            });
         }
 
-
+        // ✅ Update Wishlist Item
         [HttpPut("{wishlistId}")]
         public async Task<IActionResult> UpdateWishlist(int wishlistId, [FromBody] int productId)
         {
             await _wishlistRepo.UpdateWishlist(wishlistId, productId);
-            return Ok("Wishlist updated");
+
+            return Ok(new
+            {
+                Success = true,
+                Message = "Wishlist updated successfully"
+            });
         }
 
+        // ✅ Remove Specific Product from Wishlist
         [HttpDelete("{userId}/{productId}")]
         public async Task<IActionResult> RemoveFromWishlist(int userId, int productId)
         {
             await _wishlistRepo.RemoveFromWishlist(userId, productId);
-            return Ok("Removed from wishlist");
+
+            return Ok(new
+            {
+                Success = true,
+                Message = "Product removed from wishlist"
+            });
         }
 
+        // ✅ Clear Wishlist for User
         [HttpDelete("clear/{userId}")]
         public async Task<IActionResult> ClearWishlist(int userId)
         {
             await _wishlistRepo.ClearWishlist(userId);
-            return Ok("Wishlist cleared");
+
+            return Ok(new
+            {
+                Success = true,
+                Message = "Wishlist cleared successfully"
+            });
         }
     }
 }

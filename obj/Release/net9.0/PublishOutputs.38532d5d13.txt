@@ -1,6 +1,12 @@
 E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\publish\ECommerceAPI.exe
+E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\publish\publish\web.config
 E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\publish\appsettings.Development.json
 E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\publish\appsettings.json
+E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\publish\publish\appsettings.Development.json
+E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\publish\publish\appsettings.json
+E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\publish\publish\ECommerceAPI.deps.json
+E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\publish\publish\ECommerceAPI.runtimeconfig.json
+E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\publish\publish\ECommerceAPI.staticwebassets.endpoints.json
 E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\publish\ECommerceAPI.dll
 E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\publish\ECommerceAPI.deps.json
 E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\publish\ECommerceAPI.runtimeconfig.json

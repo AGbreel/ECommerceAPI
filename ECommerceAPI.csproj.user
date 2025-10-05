@@ -2,6 +2,6 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ActiveDebugProfile>https</ActiveDebugProfile>
-    <NameOfLastUsedPublishProfile>E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\Properties\PublishProfiles\site38273-WebDeploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>E:\BFCAI\Web\Back-end\ECommerceAPP\ECommerceAPI\Properties\PublishProfiles\site38315-WebDeploy1.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

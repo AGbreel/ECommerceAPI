@@ -79,9 +79,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:5173") // عنوان الفرونت
-                                .AllowAnyHeader()
-                                .AllowAnyMethod();
+                          policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                          //   policy.WithOrigins("http://localhost:5173")
+                          //         .AllowAnyHeader()
+                          //         .AllowAnyMethod();
                       });
 });
 
@@ -112,14 +113,25 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-    await DbSeeder.SeedAdminsAsync(services);
+
+    try
+    {
+        await DbSeeder.SeedAdminsAsync(services);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Seeding failed: {ex.Message}");
+    }
+
 }
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// if (app.Environment.IsDevelopment())
+// {
+//     app.UseSwagger();
+//     app.UseSwaggerUI();
+// }
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseStaticFiles(); // يخدم wwwroot
 app.UseHttpsRedirection();
@@ -134,4 +146,9 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// ✅ عشان Render يحدد البورت
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Urls.Add($"http://*:{port}");
+
 app.Run();
+
