@@ -134,7 +134,7 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseStaticFiles(); // يخدم wwwroot
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 app.UseRouting();
 
