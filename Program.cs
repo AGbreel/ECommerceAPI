@@ -148,7 +148,4 @@ app.MapControllers();
 
 // ✅ عشان Render يحدد البورت
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-app.Urls.Add($"http://*:{port}");
-
-app.Run();
-
+app.Run($"http://0.0.0.0:{port}");
